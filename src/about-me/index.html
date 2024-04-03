@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+
+    <link rel="stylesheet" href="../css/about-me.css">
+    <link rel="icon" href="../images/doggy.png" />
+    <script src="../js/about-me.js" type="module"></script>
+</head>
+<body>
+    <header id="main-header"></header>
+    <main>
+        <section id="me">
+            <div class="text-me">
+                <h1 class="title">This is me!</h1>
+                <p>My name is Selene and I'm the cutest girl you will find</p>
+            </div>
+            <div class="img-me">
+                <div class="first_background"></div>
+                <div class="second_background"></div>
+                <img src="../images/second-background.jpg" alt="This is a picture of me" class="my-pic">
+            </div>
+        </section>
+        <section id="comments">
+            <form id="CommentForm">
+                <fieldset>
+                    <label>Would you like to leave a comment?</label>
+                    <input class="comment_input" type="text" name="comment" required>
+                    <input type="submit" class="submitComment" value="Post Comment!">
+                </fieldset>
+            </form>
+            <div class="posted-commments"></div>
+        </section>
+        <div class="links">
+            <a class="home link" href="/">Home Page?</a>
+            <a class="your-dog link" href="/your-dog/index.html">Let's see which breed suits you</a>
+        </div>
+    </main>
+    <footer id="main-footer"></footer>
+</body>
+</html>

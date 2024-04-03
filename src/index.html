@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selene's dogs</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="./images/doggy.png" />
+    <script src="./js/main.js" type="module"></script>
+  </head>
+  <body>
+    <header id="main-header"></header>
+    <main>
+      <h1 class="title">Welcome!</h1>
+      <section class="welcoming">
+        <div class="welcoming-div">
+          <img class="welcoming-img" src="./images/golden.png" alt="Golden Retriver">
+          <p>
+            <span class="text-content">In this website you will be able to know more about what you and I love, DOGS! as you can see from taking a quick look of this website, we love Golden Retrievers but we explore and want to show you about all kinds of dogs!</span>
+          </p>
+        </div>
+      </section>
+      <section id="facts">
+        <h3 class="facts-title">Want to hear an interesting fact about dogs?</h3>
+        <button>Click here</button>
+        <p class="fact-container"></p>
+        <!-- source from https://www.akc.org/expert-advice/lifestyle/dog-facts/  -->
+      </section>
+      <section id="calculator">
+        <form id="calcForm">
+          <h3 class="calcTitle">Would you like to know the age of your dog?</h3>
+          <fieldset class="field">
+            <label class="dog_size">Select the dog size</label>
+              <div class="options">
+                <input type="radio" id="small" name="dog_size" value="small">
+                <label for="small">Small</label><br>
+                <input type="radio" id="medium" name="dog_size" value="medium">
+                <label for="medium">Medium</label><br>
+                <input type="radio" id="large" name="dog_size" value="large">
+                <label for="large">Large</label><br>
+                <input type="radio" id="giant" name="dog_size" value="giant">
+                <label for="giant">Giant</label><br>
+              </div>
+            <label class="human_age">Now enter the age (in human years)</label>
+              <input class="human_age_input" type="number" name="human_age" step="1" required>
+            <input type="submit" class="submitAge" value="See your dog's age!">
+            <span class="ageResult"></span>
+          </fieldset>
+        </form>
+      </section>
+      <div class="links">
+        <a class="your-dog link" href="/your-dog/index.html">Let's see which breed suits you</a>
+        <a class="about-me link" href="/about-me/index.html">Want to know a little bit about me?</a>
+    </div>
+    </main>
+    <footer id="main-footer"></footer>
+  </body>
+</html>

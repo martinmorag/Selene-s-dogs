@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Preahvihear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+:root {
+  --primary-color: #F6C28B;
+  --secondary-color: #FCD7AD;
+  --tertiary-color: #F5CB5C;
+}
+
+@media screen and (min-width: 700px) {
+
+  body {
+    margin: 0;
+    font-family: "Madimi One";
+    position: relative; 
+  }
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/background.webp') center center;
+    background-size: cover;
+    opacity: 0.75; /* Adjust the opacity as needed */
+    z-index: -1; /* Ensure the pseudo-element is behind the content */
+  }
+  
+  /* HEADER */
+  
+  header {
+    background-color: var(--secondary-color);
+    margin: 0;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .pic-section {
+    background-color: var(--primary-color);
+    width: 90px;
+    height:100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin: 0 0 0 30px;
+  }
+  .header-pic {
+    width: 90px;
+    height: auto;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 23px;
+    width: 35vw;
+    margin: auto 0;
+  }
+  nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 10px;
+  }
+  nav a:hover {
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color);
+    transition: all .4s ease-in-out;
+  }
+  
+  /* MAIN */
+  
+  .title {
+    text-align: center;
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  main { 
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 180px 1fr 1fr 1.2fr 150px;
+  }
+  .title {
+    font-size: 45px;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* welcoming section */
+  .welcoming {
+    grid-row: 2 / 3;
+    max-width: 100vw;
+  }
+  .welcoming-div {
+    display: flex;
+  }
+  .welcoming-img {
+    width: 50%;
+    height: auto;
+  }
+  .welcoming-div p {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 5% 10% 10% 10%;
+    font-size: 20px;
+    text-align: center;
+  }
+  .text-content {
+    font-family: 'Carter One';
+  }
+  /* end of welcoming section */
+
+  /* facts section */
+  #facts {
+    grid-row: 3 / 4;
+    width: 40vw;
+    height: 400px;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: var(--tertiary-color);
+    text-align: center;
+  }
+  .facts-title {
+    font-size: 23px;
+    padding: 40px 15% 20px;
+    margin: 0;
+  }
+  #facts button {
+    background-color: var(--primary-color);
+    border: 3px solid transparent;
+    font-family: "Madimi One";
+    font-size: 20px;
+    width: 110px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .fact-container {
+    animation: fadeInUp 1s ease-out forwards;
+    width: 70%;
+    margin: 30px auto 0;
+    font-size: 19px;
+  }
+  /* end of facts section */
+  /* age calculator section */
+  #calculator {
+    grid-row: 4 / 5;
+  }
+  .calcTitle {
+    font-size: 25px;
+    margin: 25px;
+  }
+  #calcForm {
+    width: 70vw;
+    height: 400px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border: 3px solid var(--secondary-color);
+    border-radius: 10px;
+  }
+  .dog_size {
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .options {
+    padding: 10px;
+  }
+  .human_age_input {
+    margin: 15px auto;
+    border: 1px solid transparent;
+    border-radius: 10px;
+  }
+  .submitAge {
+    width: 65%;
+    height: 30px;
+    margin: 10px auto;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    font-family: "Madimi One";
+    font-size: 16px;
+  }
+  .ageResult {
+    margin: 10px auto;
+    font-size: 18px;
+  }
+  
+  /* end of age calculator section */
+
+  /* links to different pages */
+  .links {
+    grid-row: 5 / 6;
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+  }
+  .link {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      margin: 30px 10px;
+      text-decoration: none;
+      color: black;
+      font-size: 19px;
+      background-color: var(--secondary-color);
+      width: 340px;
+      height: 40px;
+      border-radius: 5px;
+      border: 2px solid var(--primary-color);
+  }
+  /* end of links to different pages */
+  
+  /* FOOTER */
+  
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: var(--secondary-color);
+  }
+
+}

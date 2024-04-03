@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Dog</title>
+
+    <link rel="stylesheet" href="../css/your-dog.css">
+    <link rel="icon" href="../images/doggy.png" />
+    <script src="../js/reasonBreed.js" type="module"></script>
+</head>
+<body>
+    <header id="main-header"></header>
+    <main>
+        <div class="title-container">
+            <h1 class="title">
+              <span class="title-word title-word-1">Let's find out</span>
+              <span class="title-word title-word-2">which kind of dogs</span>
+              <span class="title-word title-word-3">are compatible</span>
+              <span class="title-word title-word-4">with you!</span>
+            </h1>
+        </div>
+        <div class="userPreference">
+            <form id="myForm">
+                <label for="browser">Which do you think is the quality that best describes you?</label>
+                <input list="breeds" name="breed" id="breed-list" placeholder="Please select a charasteristic">
+                <datalist id="breeds">
+                <option value="Stubborn">
+                <option value="Curious">
+                <option value="Playful">
+                <option value="Adventurous">
+                <option value="Fun-loving">
+                <option value="Aloof">
+                <option value="Clownish">
+                <option value="Dignified">
+                <option value="Independent">
+                <option value="Happy">
+                <option value="Wild">
+                <option value="Hardworking">
+                <option value="Dutiful">
+                <option value="Outgoing">
+                <option value="Friendly">
+                <option value="Alert">
+                <option value="Confident">
+                <option value="Intelligent">
+                <option value="Courageous">
+                <option value="Loyal">
+                <option value="Brave">
+                <option value="Docile">
+                <option value="Responsive">
+                <option value="Composed">
+                <option value="Faithful">
+                <option value="Receptive">
+                <option value="Loving">
+                <option value="Protective">
+                <option value="Trainable">
+                <option value="Responsible">
+                <option value="Energetic">
+                <option value="Gentle">
+                <option value="Affectionate">
+                <option value="Devoted">
+                <option value="Assertive">
+                <option value="Dominant">
+                </datalist>
+                <input class="submitBtn" type="submit" value="See about the dogs you like!">
+            </form>
+            <h3 id="intro"></h3>
+            <section id="selectedBreeds">
+            </section>
+        </div>
+        <section class="history">
+            <h2 class="history-title">These are the kind of dogs you liked recently!</h2>
+            <div class="display-history">
+            </div>
+        </section>
+        <div class="links">
+            <a class="home link" href="/">Home Page?</a>
+            <a class="about-me link" href="/about-me/index.html">Want to know a little bit about me?</a>
+        </div>
+    </main>
+    <footer id="main-footer"></footer>
+</body>
+</html>
