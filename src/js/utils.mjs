@@ -1,5 +1,5 @@
-const URL = import.meta.env.API_URL;
-const API_KEY = import.meta.env.API_KEY;
+const URL = import.meta.env.VITE_URL;
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 export function getLocalStorage(key) {
     return JSON.parse(localStorage.getItem(key));
