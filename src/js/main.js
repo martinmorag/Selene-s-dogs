@@ -1,4 +1,4 @@
-import { Breed } from "./calculator.mjs";
+import { Calculator } from "./calculator.mjs";
 import { loadHeaderFooter } from "./utils.mjs";
 
 loadHeaderFooter();
@@ -47,5 +47,5 @@ textContent.addEventListener('mouseout', () => {
 });
 
 /* displayCalculator result */
-const breed = new Breed();
-breed.init();
+const calc = new Calculator();
+calc.init();

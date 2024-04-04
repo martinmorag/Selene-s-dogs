@@ -10,151 +10,178 @@
     --my-pic-width: 200px;
     --my-pic-height: auto;
 }
-@media screen and (min-width: 700px) {
 
-    body {
-        font-family: "Madimi One";
-        margin: 0;
-        position: relative;
-    }
-    body::after {
-        content: "";
-        background-image: url('../images/third-background.jpg');
-        background-size: cover;
-        opacity: 0.75; /* Adjust the opacity value as needed */
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: -5; /* Ensure the pseudo-element is behind other content */
-    }
+
+body {
+    font-family: "Madimi One";
+    margin: 0;
+    position: relative;
+}
+body::after {
+    content: "";
+    background-image: url('../images/third-background.jpg');
+    background-size: cover;
+    opacity: 0.75; /* Adjust the opacity value as needed */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -5; /* Ensure the pseudo-element is behind other content */
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--secondary-color);
+    margin: 0;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pic-section {
+    background-color: var(--primary-color);
+    width: 90px;
+    height:100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin: 0 0 0 30px;
+}
+.header-pic {
+    width: 90px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 23px;
+    width: 35vw;
+    margin: auto 0;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+nav a:hover {
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color);
+    transition: all .4s ease-in-out;
+}
+
+/* end of HEADER */
+
+#me {
+    display: flex;
+}
+.img-me {
+    text-align: center;    
+    position: relative;
+    width: 60vw;
+}
+.text-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40vw;
+}
+.my-pic {
+    width: var(--my-pic-width);
+    height: var(--my-pic-height);
+    position: relative;
+}
+
+.first_background,
+.second_background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.first_background {
+    background-color: var(--primary-color);
+    width: var(--my-pic-width);
+    height: 406.77px;
+    rotate: 10deg;
+    z-index: -1;
+}
+.second_background {
+    background-color: var(--tertiary-color);
+    width: var(--my-pic-width);
+    height: 406.77px;
+    rotate: -10deg;
+    z-index: -2;
+}
+
+
+/* links to different pages */
+.links {
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+}
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+    background-color: var(--secondary-color);
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--primary-color);
+}
+.about-me {
+    width: 300px;
+}
+/* end of links to different pages */
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: var(--secondary-color);
+}
+
+/* end of FOOTER */
+@media screen and (max-width: 700px) {
 
     /* HEADER */
-  
     header {
-        background-color: var(--secondary-color);
-        margin: 0;
-        height: 80px;
-        display: flex;
-        justify-content: space-between;
+        height: 40px;
     }
-    
     .pic-section {
-        background-color: var(--primary-color);
-        width: 90px;
-        height:100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        margin: 0 0 0 30px;
+        width: 58px;
+        height: 60px;
+        text-align: center;
     }
     .header-pic {
-        width: 90px;
+        width: 45px;
         height: auto;
     }
-    
     nav {
-        display: flex;
-        justify-content: space-evenly;
-        font-size: 23px;
-        width: 35vw;
-        margin: auto 0;
+        width: 65vw;
+        font-size: 15px;
     }
-    nav a {
-        text-decoration: none;
-        color: black;
-        padding: 10px 15px;
-        border-radius: 10px;
-    }
-    nav a:hover {
-        text-decoration: none;
-        color: white;
-        background-color: var(--primary-color);
-        transition: all .4s ease-in-out;
-    }
-
     /* end of HEADER */
 
-    #me {
-        display: flex;
-    }
-    .img-me {
-        text-align: center;    
-        position: relative;
-        width: 60vw;
-    }
-    .text-me {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 40vw;
-    }
-    .my-pic {
-        width: var(--my-pic-width);
-        height: var(--my-pic-height);
-        position: relative;
-    }
-
-    .first_background,
-    .second_background {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-    .first_background {
-        background-color: var(--primary-color);
-        width: var(--my-pic-width);
-        height: 406.77px;
-        rotate: 10deg;
-        z-index: -1;
-    }
-    .second_background {
-        background-color: var(--tertiary-color);
-        width: var(--my-pic-width);
-        height: 406.77px;
-        rotate: -10deg;
-        z-index: -2;
-    }
-
-
     /* links to different pages */
-    .links {
-        display: flex;
-        justify-content: space-between;
-        height: 150px;
-    }
     .link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 30px 50px;
-        text-decoration: none;
-        color: black;
-        font-size: 19px;
-        background-color: var(--secondary-color);
-        width: 140px;
-        height: 40px;
-        border-radius: 5px;
-        border: 2px solid var(--primary-color);
-    }
-    .about-me {
-        width: 300px;
+        width: 220px;
+        font-size: 12px;
+        text-align: center;
     }
     /* end of links to different pages */
-
-    /* FOOTER */
-  
-    footer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 50px;
-        background-color: var(--secondary-color);
-    }
-
-    /* end of FOOTER */
-
 }

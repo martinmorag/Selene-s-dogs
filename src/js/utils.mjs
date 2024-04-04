@@ -1,5 +1,5 @@
-const URL = 'https://api.thedogapi.com/v1/breeds';
-const API_KEY = 'live_TQl1cIlZjyOt9odKKBOtqozEMEYfEQWUvLFtuZl5TTz9yBqK7ZQYD5FKG9fmcFIh'; 
+const URL = import.meta.env.VITE_URL;
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 export function getLocalStorage(key) {
     return JSON.parse(localStorage.getItem(key));

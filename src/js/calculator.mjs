@@ -1,4 +1,4 @@
-export class Breed {
+export class Calculator {
     constructor() {
         this.size = '';
         this.humanYears = 0;

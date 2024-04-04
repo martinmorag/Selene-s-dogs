@@ -9,456 +9,353 @@
     --secondary-color-tr: #FCD7AD25;
     --tertiary-color-tr: #F5CB5C25;
 }
-@media screen and (min-width: 700px) {
 
-    body {
-        font-family: "Madimi One";
-    }
+body {
+    font-family: "Madimi One";
+}
 
+/* HEADER */
+
+header {
+    background-color: var(--secondary-color);
+    margin: 0;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pic-section {
+    background-color: var(--primary-color);
+    width: 90px;
+    height:100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin: 0 0 0 30px;
+}
+.header-pic {
+    width: 90px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 23px;
+    width: 35vw;
+    margin: auto 0;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+nav a:hover {
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color);
+    transition: all .4s ease-in-out;
+}
+
+/* end of HEADER */
+
+body {
+    position: relative;
+    margin: 0;
+}
+body::after {
+    content: "";
+    background-image: url('../public/images/second-background.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.75; /* Adjust the opacity value as needed */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; /* Ensure the pseudo-element is behind other content */
+}
+main {
+    padding: 20px;
+}
+/* title styling */
+.title-word {
+    animation: color-animation 4s linear infinite;
+    font-size: 35px;
+}
+
+span.title-word-1 {
+    --color-1: #DF8453;
+    --color-2: #3D8DAE;
+    --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+    --color-1: #DBAD4A;
+    --color-2: #ACCFCB;
+    --color-3: #17494D;
+}
+
+.title-word-3 {
+    --color-1: #ACCFCB;
+    --color-2: #E4A9A8;
+    --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+    --color-1: #3D8DAE;
+    --color-2: #DF8453;
+    --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+}
+.title-container {
+    display: grid;
+    place-items: center;  
+    text-align: center;
+    height: 70px;
+    width: 80vw;
+    margin: 100px auto;
+    padding: 0 0 20px;
+    border-radius: 20px;
+    background-color: rgba(46, 31, 39, 0.8);
+}
+/* end of title styling */
+/* form styling */
+#myForm label {
+    padding: 20px;
+    font-size: 20px;
+}
+#myForm {
+    width: 60vw;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+}
+#breed-list {
+    width: 220px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    font-size: 15px;
+    padding: 8px;
+}
+.submitBtn {
+    width: 220px;
+    height: 35px;
+    border-radius: 10px;
+    border: 2px solid var(--secondary-color);
+    background-color: white;
+    margin: 10px;
+    font-size: 15px;
+    font-family: "Madimi One";
+    padding: 5px;
+}
+/* end of form styling */
+
+/* selectedBreed selection and intro */
+#selectedBreeds {
+    border-radius: 20px;
+    border: 1px solid transparent;
+    position: relative;
+    z-index: 1;
+}
+#selectedBreeds::before {
+    content: "";
+    background-color: var(--primary-color);
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(10px); /* Adjust the blur radius as needed */
+}
+#intro {
+    color: rgba(46, 31, 39);
+    text-align: center;
+    font-size: 30px;
+    padding: 50px 0 25px;
+}
+.dog_info {
+    display: flex;
+    margin: 0 auto;
+    width: 80vw;
+    height: 200px;
+    padding: 50px 20px;
+}
+.dog_image {
+    height: 200px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+#selectedBreeds h3 {
+    font-size: 25px;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 30px;
+    color: black;
+    font-size: 20px;
+}
+
+/* end of selectedBreed selection and intro */
+/* links to different pages */
+.links {
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+}
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+    background-color: var(--secondary-color);
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--primary-color);
+}
+.about-me {
+    width: 340px;
+}
+/* end of links to different pages */
+
+/* user's search history */
+.history-title {
+    text-align: center;
+}
+.history-item {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px auto;
+}
+.delete-btn {
+    background-color: var(--secondary-color-tr);
+    color: black;
+    font-weight: bold;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 4px 8px;
+}
+/* end of user's search history */
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: var(--secondary-color);
+}
+
+/* end of FOOTER */
+
+@media screen and (max-width: 700px) {
     /* HEADER */
-  
     header {
-        background-color: var(--secondary-color);
-        margin: 0;
-        height: 80px;
-        display: flex;
-        justify-content: space-between;
+        height: 40px;
     }
-    
     .pic-section {
-        background-color: var(--primary-color);
-        width: 90px;
-        height:100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        margin: 0 0 0 30px;
+        width: 58px;
+        height: 60px;
+        text-align: center;
     }
     .header-pic {
-        width: 90px;
+        width: 45px;
         height: auto;
     }
-    
     nav {
-        display: flex;
-        justify-content: space-evenly;
-        font-size: 23px;
-        width: 35vw;
-        margin: auto 0;
+        width: 65vw;
+        font-size: 15px;
     }
-    nav a {
-        text-decoration: none;
-        color: black;
-        padding: 10px 15px;
-        border-radius: 10px;
-    }
-    nav a:hover {
-        text-decoration: none;
-        color: white;
-        background-color: var(--primary-color);
-        transition: all .4s ease-in-out;
-    }
-
     /* end of HEADER */
-
-    body {
-        position: relative;
-        margin: 0;
-    }
-    body::after {
-        content: "";
-        background-image: url('../public/images/second-background.jpg');
-        background-size: cover;
-        background-position: center;
-        opacity: 0.75; /* Adjust the opacity value as needed */
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: -1; /* Ensure the pseudo-element is behind other content */
-    }
-    main {
-        padding: 20px;
-    }
-    /* title styling */
     .title-word {
-        animation: color-animation 4s linear infinite;
-        font-size: 35px;
+        font-size: 25px;
     }
-    
-    span.title-word-1 {
-        --color-1: #DF8453;
-        --color-2: #3D8DAE;
-        --color-3: #E4A9A8;
-    }
-    
-    .title-word-2 {
-        --color-1: #DBAD4A;
-        --color-2: #ACCFCB;
-        --color-3: #17494D;
-    }
-    
-    .title-word-3 {
-        --color-1: #ACCFCB;
-        --color-2: #E4A9A8;
-        --color-3: #ACCFCB;
-    }
-    
-    .title-word-4 {
-        --color-1: #3D8DAE;
-        --color-2: #DF8453;
-        --color-3: #E4A9A8;
-    }
-    
-    @keyframes color-animation {
-        0%    {color: var(--color-1)}
-        32%   {color: var(--color-1)}
-        33%   {color: var(--color-2)}
-        65%   {color: var(--color-2)}
-        66%   {color: var(--color-3)}
-        99%   {color: var(--color-3)}
-        100%  {color: var(--color-1)}
+    .title {
+        margin: 10px;
     }
     .title-container {
-        display: grid;
-        place-items: center;  
-        text-align: center;
-        height: 70px;
+        height: 95px;
         width: 80vw;
         margin: 100px auto;
         padding: 0 0 20px;
-        border-radius: 20px;
-        background-color: rgba(46, 31, 39, 0.8);
     }
-    /* end of title styling */
+
     /* form styling */
     #myForm label {
-        padding: 20px;
-        font-size: 20px;
+        font-size: 22px;
+        text-align: center;
     }
     #myForm {
-        width: 60vw;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        border-radius: 5px;
-        background-color: var(--primary-color);
-    }
-    #breed-list {
-        width: 220px;
-        height: 30px;
-        border-radius: 10px;
-        border: 2px solid transparent;
-        font-size: 15px;
-        padding: 8px;
+        width: 80vw;
+        height: 250px;
     }
     .submitBtn {
-        width: 220px;
-        height: 35px;
-        border-radius: 10px;
-        border: 2px solid var(--secondary-color);
-        background-color: white;
-        margin: 10px;
-        font-size: 15px;
-        font-family: "Madimi One";
-        padding: 5px;
+        width: 280px;
+        height: 40px;
+        font-size: 18px;
+        margin: 19px;
     }
     /* end of form styling */
-    
+
     /* selectedBreed selection and intro */
-    #selectedBreeds {
-        border-radius: 20px;
-        border: 1px solid transparent;
-        position: relative;
-        z-index: 1;
-    }
-    #selectedBreeds::before {
-        content: "";
-        background-color: var(--primary-color);
-        background-size: 100% 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: -1;
-        opacity: 0.5;
-        filter: blur(10px); /* Adjust the blur radius as needed */
-    }
     #intro {
-        color: rgba(46, 31, 39);
-        text-align: center;
-        font-size: 30px;
-        padding: 50px 0 25px;
+        font-size: 22px;
     }
     .dog_info {
-        display: flex;
-        margin: 0 auto;
-        width: 80vw;
-        height: 200px;
-        padding: 50px 20px;
+        flex-direction: column;
+        height: 330px;
+        align-items: center;
     }
     .dog_image {
-        height: 200px;
-        width: auto;
-        display: flex;
-        justify-content: center;
-    }
-    #selectedBreeds h3 {
-        font-size: 25px;
+        height: 150px;
+        width: 200px;
     }
     .info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0 30px;
-        color: black;
-        font-size: 20px;
+        margin: 0 10px;
+        font-size: 18px;
     }
-    
-    /* end of selectedBreed selection and intro */
-    /* links to different pages */
-    .links {
-        display: flex;
-        justify-content: space-between;
-        height: 150px;
+    .info p {
+        margin: 0 0 5px 0 ;
     }
-    .link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 30px 50px;
-        text-decoration: none;
-        color: black;
-        font-size: 19px;
-        background-color: var(--secondary-color);
-        width: 140px;
-        height: 40px;
-        border-radius: 5px;
-        border: 2px solid var(--primary-color);
-    }
-    .about-me {
-        width: 340px;
-    }
-    /* end of links to different pages */
-
     /* user's search history */
     .history-title {
-        text-align: center;
-    }
-    .history-item {
-        font-size: 20px;
-        text-align: center;
-        margin: 20px auto;
-    }
-    .delete-btn {
-        background-color: var(--secondary-color-tr);
-        color: black;
-        font-weight: bold;
-        border: 2px solid var(--primary-color);
-        border-radius: 10px;
-        padding: 4px 8px;
+        font-size: 21px;
     }
     /* end of user's search history */
 
-    /* FOOTER */
-  
-    footer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 50px;
-        background-color: var(--secondary-color);
-    }
-
-    /* end of FOOTER */
-}
-@media screen and (max-width: 700px) {
-    body {
-        position: relative;
-        margin: 0;
-    }
-    body::after {
-        content: "";
-        background-image: url('../images/second-background.jpg');
-        background-size: cover;
-        opacity: 0.75; /* Adjust the opacity value as needed */
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: -1; /* Ensure the pseudo-element is behind other content */
-    }
-    main {
-        padding: 20px;
-    }
-    /* title styling */
-    .title-word {
-        animation: color-animation 4s linear infinite;
-        font-size: 25px;
-    }
-    
-    span.title-word-1 {
-        --color-1: #DF8453;
-        --color-2: #3D8DAE;
-        --color-3: #E4A9A8;
-    }
-    
-    .title-word-2 {
-        --color-1: #DBAD4A;
-        --color-2: #ACCFCB;
-        --color-3: #17494D;
-    }
-    
-    .title-word-3 {
-        --color-1: #ACCFCB;
-        --color-2: #E4A9A8;
-        --color-3: #ACCFCB;
-    }
-    
-    .title-word-4 {
-        --color-1: #3D8DAE;
-        --color-2: #DF8453;
-        --color-3: #E4A9A8;
-    }
-    
-    @keyframes color-animation {
-        0%    {color: var(--color-1)}
-        32%   {color: var(--color-1)}
-        33%   {color: var(--color-2)}
-        65%   {color: var(--color-2)}
-        66%   {color: var(--color-3)}
-        99%   {color: var(--color-3)}
-        100%  {color: var(--color-1)}
-    }
-    .title-container {
-        display: grid;
-        place-items: center;  
-        text-align: center;
-        height: 20vh;
-        width: 85vw;
-        margin: 80px auto;
-        padding: 0 10px 20px;
-        border-radius: 20px;
-        background-color: rgba(46, 31, 39, 0.8);
-    }
-    /* end of title styling */
-    /* form styling */
-    #myForm label {
-        padding: 20px;
-        font-size: 20px;
-    }
-    #myForm {
-        width: 80vw;
-        height: 230px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        border-radius: 5px;
-        background-color: var(--primary-color);
-    }
-    #breed-list {
-        width: 220px;
-        height: 30px;
-        border-radius: 10px;
-        border: 2px solid transparent;
-        font-size: 15px;
-        padding: 8px;
-    }
-    .submitBtn {
-        width: 220px;
-        height: 35px;
-        border-radius: 10px;
-        border: 2px solid var(--secondary-color);
-        background-color: white;
-        margin: 10px;
-        font-size: 15px;
-        padding: 5px;
-    }
-    /* end of form styling */
-    
-    /* selectedBreed selection and intro */
-    #selectedBreeds {
-        border-radius: 20px;
-        border: 1px solid transparent;
-        position: relative;
-        z-index: 1;
-    }
-    #selectedBreeds::before {
-        content: "";
-        background-color: var(--primary-color);
-        background-size: 100% 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: -1;
-        opacity: 0.5;
-        filter: blur(10px); /* Adjust the blur radius as needed */
-    }
-    #intro {
-        color: rgba(46, 31, 39);
-        text-align: center;
-        font-size: 22px;
-        padding: 50px 0 25px;
-    }
-    .dog_info {
-        display: flex;
-        margin: 20px auto;
-        width: 80vw;
-        height: 100px;
-        padding: 50px 20px;
-    }
-    .dog_image {
-        height: 100px;
-        width: auto;
-        display: flex;
-        justify-content: center;
-    }
-    #selectedBreeds h3 {
-        font-size: 15px;
-    }
-    .info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0 0 0 20px;
-        color: black;
-        font-size: 13px;
-    }
-    .info p {
-        margin: 5px 0;
-    }
-    
-    /* end of selectedBreed selection and intro */
     /* links to different pages */
-    .links {
-        display: flex;
-        justify-content: space-around;
-        height: 150px;
-    }
     .link {
-        display: flex;
-        justify-content: center;
+        width: 220px;
+        font-size: 12px;
         text-align: center;
-        align-items: center;
-        margin: 30px 10px;
-        text-decoration: none;
-        color: black;
-        font-size: 14px;
-        background-color: var(--secondary-color);
-        width: 1000px;
-        height: 40px;
-        border-radius: 5px;
-        border: 2px solid var(--primary-color);
     }
     /* end of links to different pages */
 }

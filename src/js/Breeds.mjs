@@ -35,13 +35,17 @@ export default class Breeds {
     }
     async displayResults(selection) {
       const response = await displayBreeds();
+      if (!Array.isArray(response)) {
+        console.error("Error: Breed data is not an array.");
+        return;
+      }
       this.listOfNames = response
-              .filter(breed => breed.temperament && breed.temperament.toLowerCase().includes(this.selection.toLowerCase()))
-              .map(breed => breed);
-    
+        .filter(breed => breed.temperament && breed.temperament.toLowerCase().includes(this.selection.toLowerCase()))
+        .map(breed => breed);
+
       // Display filtered breeds
       if (this.listOfNames.length === 0) {
-        console.log("No breeds found with temperament '" + selection + "'.");
+          console.log("No breeds found with temperament '" + selection + "'.");
       } else {
           this.insertData(); // Call insertData after fetching and filtering breeds
       }
@@ -116,5 +120,4 @@ export default class Breeds {
         self.sendHistory();
       });
     }
-    
 }
