@@ -90,6 +90,7 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
     width: 60vw;
     margin: 50px;
 }
@@ -284,9 +285,6 @@ footer {
         width: 90vw;
         margin: 30px;
         text-align: center;
-    }
-    .first_background, .second_background {
-        height: 250px;
     }
     .first-dog {
         flex-direction: column;
