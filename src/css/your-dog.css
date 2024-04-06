@@ -352,6 +352,9 @@ footer {
     /* end of user's search history */
 
     /* links to different pages */
+    nav {
+        font-size: 13px;
+    }
     .link {
         width: 220px;
         font-size: 12px;

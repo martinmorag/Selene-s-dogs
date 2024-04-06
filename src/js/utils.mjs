@@ -20,7 +20,6 @@ try {
         throw new Error('Failed to fetch breeds');
     }
     const responseData = await response.json();
-    console.log(responseData);
     return responseData;
 } catch(err) {
     console.log(err);

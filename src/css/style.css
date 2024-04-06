@@ -307,6 +307,9 @@ footer {
   /* end of welcoming section */
 
   /* links to different pages */
+  nav {
+    font-size: 13px;
+  }
   .link {
     width: 160px;
     font-size: 12px;

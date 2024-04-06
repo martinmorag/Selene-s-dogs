@@ -196,7 +196,7 @@ nav a:hover {
 .comment {
     width: 200px;
     padding: 10px;
-    margin: 15px;
+    margin: 15px auto;
     background-color: var(--secondary-color);
     color: black;
     border-radius: 10px;
@@ -275,7 +275,36 @@ footer {
     }
     /* end of HEADER */
 
+    /* Comments style */
+    .comments-title {
+        font-size: 25px;
+    }
+    #CommentForm fieldset {
+        width: 90%;
+        height: 100%;
+    }
+    #CommentForm label {
+        font-size: 21px;
+    }
+    .submitComment {
+        margin: 10px auto 20px;
+        font-size: 17px;
+    }
+    .posts-title {
+        font-size: 25px;
+    }
+    .posted-comments {
+        margin: 50px auto 100px;
+        grid-template-columns: 1fr;
+    }
+    .comment {
+        width: 80%;
+    }
+
     /* links to different pages */
+    nav {
+        font-size: 13px;
+    }
     .link {
         width: 220px;
         font-size: 12px;
