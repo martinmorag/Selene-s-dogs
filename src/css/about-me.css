@@ -83,14 +83,14 @@ nav a:hover {
 .img-me {
     text-align: center;    
     position: relative;
-    width: 60vw;
+    width: 40vw;
 }
 .text-me {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 40vw;
+    width: 60vw;
 }
 .text-me {
     margin: 20px;
