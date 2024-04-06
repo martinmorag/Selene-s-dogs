@@ -279,6 +279,31 @@ footer {
     }
     /* end of HEADER */
 
+    #me {
+        flex-direction: column;
+    }
+    .text-me {
+        width: 90vw;
+        margin: 30px auto;
+    }
+    .img-me {
+        width: 90vw;
+    }
+    .first-dog {
+        flex-direction: column;
+    }
+    .first-dog-text {
+        margin: 40px;
+        text-align: center;
+    }
+    .second-dog {
+        flex-direction: column;
+    }
+    .second-dog-text {
+        margin: 40px;
+        text-align: center;
+    }
+
     /* links to different pages */
     .link {
         width: 220px;
