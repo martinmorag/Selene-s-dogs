@@ -275,6 +275,33 @@ footer {
     }
     /* end of HEADER */
 
+    #me {
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-me {
+        width: 90vw;
+        margin: 30px;
+        text-align: center;
+    }
+    .first_background, .second_background {
+        height: 250px;
+    }
+    .first-dog {
+        flex-direction: column;
+    }
+    .first-dog-text {
+        text-align: center;
+        margin: 40px;
+    }
+    .second-dog {
+        flex-direction: column;
+    }
+    .second-dog-text {
+        text-align: center;
+        margin: 40px;
+    }
+
     /* Comments style */
     .comments-title {
         font-size: 25px;
