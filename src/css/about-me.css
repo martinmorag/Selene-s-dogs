@@ -92,6 +92,10 @@ nav a:hover {
     flex-direction: column;
     width: 40vw;
 }
+.text-me {
+    margin: 20px;
+    text-align: center;
+}
 .my-pic {
     width: var(--my-pic-width);
     height: var(--my-pic-height);
