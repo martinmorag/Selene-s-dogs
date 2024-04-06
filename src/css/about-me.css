@@ -108,14 +108,14 @@ nav a:hover {
 .first_background {
     background-color: var(--primary-color);
     width: var(--my-pic-width);
-    height: 406.77px;
+    height: 250px;
     rotate: 10deg;
     z-index: -1;
 }
 .second_background {
     background-color: var(--tertiary-color);
     width: var(--my-pic-width);
-    height: 406.77px;
+    height: 250px;
     rotate: -10deg;
     z-index: -2;
 }
@@ -125,7 +125,7 @@ nav a:hover {
     align-items: center;
 }
 .first-dog-text {
-    margin: 0 0 0 100px;
+    margin: 0 50px 0 100px;
 }
 .first-dog-pic, .second-dog-pic {
     width: 300px;
@@ -138,7 +138,7 @@ nav a:hover {
     margin: 100px 0;
 }
 .second-dog-text {
-    margin: 0 100px 0 0;
+    margin: 0 100px 0 50px;
 }
 
 /* Comments style */
